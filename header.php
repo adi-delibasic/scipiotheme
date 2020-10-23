@@ -3,19 +3,25 @@
 /**
  * Header Template File
  * 
- * @package Scipio
- * @subpackage WordPress
+ * @package WordPress
+ * @subpackage Scipio
  * @since Scipio 1.0.0
  */
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php language_attributes(); ?>">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="<?php bloginfo('charset') ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php wp_head(); ?>
 </head>
 
-<body>
+<body class="<?php body_class(); ?>">
+  <!-- Backward compactibility for version lower then 5.2 -->
+  <?php function_exists('wp_body_open') ? wp_body_open() : ''; ?>
+  <header id="masthead">
+
+
+  </header>

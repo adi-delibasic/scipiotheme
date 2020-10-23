@@ -7,6 +7,9 @@ module.exports = {
   purge:['../**/*.php'],
   theme:{
     extend:{
+      fontFamily:{
+        primary:['Open Sans', 'sans-serif']
+      }
 
     },
   },

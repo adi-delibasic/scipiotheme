@@ -3,8 +3,8 @@
 /**
  * Scipio Theme Assets 
  * 
- * @package Scipio
- * @subpackage WordPress
+ * @package WordPress
+ * @subpackage Scipio
  * @since Scipio 1.0.0
  */
 
