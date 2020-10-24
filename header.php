@@ -7,6 +7,9 @@
  * @subpackage Scipio
  * @since Scipio 1.0.0
  */
+
+use SCIPIO\Classes\Scipio_Walker;
+
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +24,19 @@
 <body class="<?php body_class(); ?>">
   <!-- Backward compactibility for version lower then 5.2 -->
   <?php function_exists('wp_body_open') ? wp_body_open() : ''; ?>
-  <header id="masthead">
-
+  <header id="site-header">
+    <div class="nav-container text-4xl  bg-green-200">
+      <?php
+      $header_nav = new Scipio_Walker();
+      wp_nav_menu(
+        array(
+          'container' => 'nav',
+          'menu' => 'Header Menu',
+          'menu_class' => '',
+          'walker' => $header_nav
+        )
+      );
+      ?>
+    </div>
 
   </header>

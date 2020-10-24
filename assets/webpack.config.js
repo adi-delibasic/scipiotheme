@@ -70,7 +70,7 @@ const rules = [
 				loader: 'url-loader',
 				options: {
 					name: '[name].[ext]',
-					outputPath: 'css/fonts/',
+					outputPath: '/css/fonts',
 				},
 			},
 		],
@@ -83,7 +83,7 @@ const rules = [
 			{
 				loader: 'file-loader',
 				options: {
-					name: '[path][name].[ext]',
+					name: 'img/[name].[ext]',
 					publicPath: 'production' === process.env.NODE_ENV ? '../' : ' ../../',
 				},
 			},
