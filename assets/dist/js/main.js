@@ -5170,11 +5170,101 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_navigation_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_navigation_css__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _fortawesome_fontawesome_free_js_all_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/all.js */ "./node_modules/@fortawesome/fontawesome-free/js/all.js");
 /* harmony import */ var _fortawesome_fontawesome_free_js_all_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_all_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _modules_Navigation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/Navigation */ "./src/js/modules/Navigation.js");
 
 
 
+ // Modules
 
-console.log('hello');
+
+var nav = new _modules_Navigation__WEBPACK_IMPORTED_MODULE_4__["default"]();
+console.log('hello'); // const span = document.getElementsByTagName('span');
+// for (let sp of span) {
+// 	sp.addEventListener('click', (event) => {
+// 		event.preventDefault();
+// 		console.log('yeah');
+// 	});
+// }
+
+/***/ }),
+
+/***/ "./src/js/modules/Navigation.js":
+/*!**************************************!*\
+  !*** ./src/js/modules/Navigation.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Navigation = /*#__PURE__*/function () {
+  function Navigation() {
+    _classCallCheck(this, Navigation);
+
+    this.spanElement = document.querySelectorAll('.dropdown-icon');
+    this.dropdownMenu();
+  }
+
+  _createClass(Navigation, [{
+    key: "events",
+    value: function events() {} // Handlers
+    // Methods
+
+  }, {
+    key: "dropdownMenu",
+    value: function dropdownMenu() {
+      // Check is element exists
+      if (this.spanElement) {
+        /**
+         * Add event listener
+         * Prevent span elements from default behaviour
+         */
+        var _iterator = _createForOfIteratorHelper(this.spanElement),
+            _step;
+
+        try {
+          var _loop = function _loop() {
+            var span = _step.value;
+            span.addEventListener('click', function (event) {
+              event.preventDefault();
+              /**
+               * Select the first element
+               * to prevent opening all submenus
+               */
+
+              var spanParent = span.parentElement.parentElement.getElementsByClassName('dropdown-menu').item(0);
+              spanParent.classList.toggle('h-auto');
+            });
+          };
+
+          for (_iterator.s(); !(_step = _iterator.n()).done;) {
+            _loop();
+          }
+        } catch (err) {
+          _iterator.e(err);
+        } finally {
+          _iterator.f();
+        }
+      }
+    }
+  }]);
+
+  return Navigation;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (Navigation);
 
 /***/ })
 

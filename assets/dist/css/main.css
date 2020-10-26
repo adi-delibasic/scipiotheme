@@ -11777,6 +11777,10 @@ video {
   max-height: 100vh !important;
 }
 
+.max-h-none {
+  max-height: 0px !important;
+}
+
 .max-w-none {
   max-width: none !important;
 }
@@ -32685,6 +32689,10 @@ video {
     max-height: 100vh !important;
   }
 
+  .sm\:max-h-none {
+    max-height: 0px !important;
+  }
+
   .sm\:max-w-none {
     max-width: none !important;
   }
@@ -53526,6 +53534,10 @@ video {
 
   .md\:max-h-screen {
     max-height: 100vh !important;
+  }
+
+  .md\:max-h-none {
+    max-height: 0px !important;
   }
 
   .md\:max-w-none {
@@ -74371,6 +74383,10 @@ video {
     max-height: 100vh !important;
   }
 
+  .lg\:max-h-none {
+    max-height: 0px !important;
+  }
+
   .lg\:max-w-none {
     max-width: none !important;
   }
@@ -95214,6 +95230,10 @@ video {
     max-height: 100vh !important;
   }
 
+  .xl\:max-h-none {
+    max-height: 0px !important;
+  }
+
   .xl\:max-w-none {
     max-width: none !important;
   }
@@ -105100,7 +105120,6 @@ video {
 		
 			url(data:image/svg+xml;base64,ZXhwb3J0IGRlZmF1bHQgIiAuLi8uLi9pbWcvb3Blbi1zYW5zLXYxOC1sYXRpbi04MDBpdGFsaWMuc3ZnIjs=#OpenSans) format('svg'); /* Legacy iOS */
 }
-
 
 
 

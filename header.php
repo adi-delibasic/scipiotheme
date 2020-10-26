@@ -8,6 +8,7 @@
  * @since Scipio 1.0.0
  */
 
+use SCIPIO\Classes\Scipio_Nav_Walker;
 use SCIPIO\Classes\Scipio_Walker;
 
 ?>
@@ -24,19 +25,16 @@ use SCIPIO\Classes\Scipio_Walker;
 <body class="<?php body_class(); ?>">
   <!-- Backward compactibility for version lower then 5.2 -->
   <?php function_exists('wp_body_open') ? wp_body_open() : ''; ?>
+  <!-- Website navigation -->
   <header id="site-header">
-    <div class="nav-container text-4xl  bg-green-200">
-      <?php
-      $header_nav = new Scipio_Walker();
-      wp_nav_menu(
-        array(
-          'container' => 'nav',
-          'menu' => 'Header Menu',
-          'menu_class' => '',
-          'walker' => $header_nav
-        )
-      );
-      ?>
-    </div>
-
+    <?php
+    /**
+     * Display header navigation if exists 
+     */
+    if (has_nav_menu('scipio-header-menu')) {
+      get_template_part('template-parts/header/header', 'nav');
+    } else {
+      echo 'no menu';
+    }
+    ?>
   </header>
