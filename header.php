@@ -33,7 +33,7 @@ use SCIPIO\Classes\Scipio_Walker;
      * Display header navigation menu
      */
     if (has_nav_menu('scipio-header-menu')) {
-      get_template_part('template-parts/header/header', 'nav');
+      get_template_part('template-parts/header/header', 'left');
     } else {
       echo 'There is no menu created';
     }

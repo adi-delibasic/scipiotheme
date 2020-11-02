@@ -42,8 +42,8 @@ class Scipio_Bootstrap {
 
     //Logo
     add_theme_support('custom-logo', array(
-      'height'      => 40,
-      'width'       => 60,
+      'height'      => 100,
+      'width'       => 100,
       'flex-height' => false,
       'flex-width'  => true,
     ));
