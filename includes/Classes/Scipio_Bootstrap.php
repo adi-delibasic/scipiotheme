@@ -10,6 +10,7 @@
 
 namespace SCIPIO\Classes;
 
+use SCIPIO\Classes\Scipio_Customizer;
 use SCIPIO\Traits\Scipio_Singleton;
 
 class Scipio_Bootstrap {
@@ -19,7 +20,7 @@ class Scipio_Bootstrap {
     Scipio_Assets::get_instance();
     Scipio_Callbacks::get_instance();
     Scipio_Menus::get_instance();
-
+    Scipio_Customizer::get_instance();
     //Call method containing filters & actions
     $this->scipio_actions();
   }
@@ -39,6 +40,13 @@ class Scipio_Bootstrap {
      * as indicating support for post thumbnails.
      */
 
+    //Logo
+    add_theme_support('custom-logo', array(
+      'height'      => 40,
+      'width'       => 60,
+      'flex-height' => false,
+      'flex-width'  => true,
+    ));
     //Title tag
     add_theme_support('title-tag');
 
