@@ -1,0 +1,36 @@
+/* NAVIGATION */
+@media only screen and (min-width: 768px) {
+	.navigation-links li {
+	}
+
+	/* First lvl menu */
+	.dropdown-menu {
+		display: none;
+	}
+
+	.dropdown-submenu:hover {
+		position: relative;
+	}
+	.menu-item-has-children {
+	}
+	.menu-item-has-children:hover > .dropdown-menu {
+		display: block;
+		position: absolute;
+		min-width: 250px;
+	}
+	.dropdown-menu li {
+		background: rgb(24, 3, 119);
+	}
+
+	/* Nested menus */
+	.dropdown-submenu:hover .dropdown-menu {
+		display: block;
+		color: red;
+		position: absolute;
+		top: 0;
+		left: 100%;
+		bottom: 0;
+		height: 100%;
+		width: 100%;
+	}
+}

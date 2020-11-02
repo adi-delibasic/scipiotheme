@@ -24,6 +24,7 @@ class ComposerStaticInit4bfdbef436801aa58789c10aecba6e78
         'SCIPIO\\Classes\\Scipio_Assets' => __DIR__ . '/../..' . '/../includes/Classes/Scipio_Assets.php',
         'SCIPIO\\Classes\\Scipio_Bootstrap' => __DIR__ . '/../..' . '/../includes/Classes/Scipio_Bootstrap.php',
         'SCIPIO\\Classes\\Scipio_Callbacks' => __DIR__ . '/../..' . '/../includes/Classes/Scipio_Callbacks.php',
+        'SCIPIO\\Classes\\Scipio_Customizer' => __DIR__ . '/../..' . '/../includes/Classes/Scipio_Customizer.php',
         'SCIPIO\\Classes\\Scipio_Menus' => __DIR__ . '/../..' . '/../includes/Classes/Scipio_Menus.php',
         'SCIPIO\\Classes\\Scipio_Nav_Walker' => __DIR__ . '/../..' . '/../includes/Classes/Scipio_Nav_Walker.php',
         'SCIPIO\\Traits\\Scipio_Singleton' => __DIR__ . '/../..' . '/../includes/Traits/Scipio_Singleton.php',

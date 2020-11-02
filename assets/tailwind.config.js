@@ -10,8 +10,14 @@ module.exports = {
 			fontFamily: {
 				primary: ['Open Sans', 'sans-serif'],
 			},
+			height: {
+				navH: '6vh',
+			},
 			maxHeight: {
 				none: '0px',
+			},
+			inset: {
+				full: '100%',
 			},
 		},
 	},

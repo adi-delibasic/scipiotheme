@@ -5178,13 +5178,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var nav = new _modules_Navigation__WEBPACK_IMPORTED_MODULE_4__["default"]();
-console.log('hello'); // const span = document.getElementsByTagName('span');
-// for (let sp of span) {
-// 	sp.addEventListener('click', (event) => {
-// 		event.preventDefault();
-// 		console.log('yeah');
-// 	});
-// }
 
 /***/ }),
 
