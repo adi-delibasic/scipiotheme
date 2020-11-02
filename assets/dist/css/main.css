@@ -10513,7 +10513,7 @@ video {
   height: 100vh !important;
 }
 
-.h-navH {
+.h-nav {
   height: 6vh !important;
 }
 
@@ -31462,7 +31462,7 @@ video {
     height: 100vh !important;
   }
 
-  .sm\:h-navH {
+  .sm\:h-nav {
     height: 6vh !important;
   }
 
@@ -52346,7 +52346,7 @@ video {
     height: 100vh !important;
   }
 
-  .md\:h-navH {
+  .md\:h-nav {
     height: 6vh !important;
   }
 
@@ -73230,7 +73230,7 @@ video {
     height: 100vh !important;
   }
 
-  .lg\:h-navH {
+  .lg\:h-nav {
     height: 6vh !important;
   }
 
@@ -94114,7 +94114,7 @@ video {
     height: 100vh !important;
   }
 
-  .xl\:h-navH {
+  .xl\:h-nav {
     height: 6vh !important;
   }
 
@@ -105320,9 +105320,6 @@ video {
 
   .dropdown-submenu:hover {
     position: relative;
-  }
-
-  .menu-item-has-children {
   }
 
   .menu-item-has-children:hover > .dropdown-menu {

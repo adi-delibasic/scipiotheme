@@ -11,7 +11,7 @@ module.exports = {
 				primary: ['Open Sans', 'sans-serif'],
 			},
 			height: {
-				navH: '6vh',
+				nav: '6vh',
 			},
 			maxHeight: {
 				none: '0px',

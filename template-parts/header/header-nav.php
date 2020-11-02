@@ -1,30 +1,20 @@
 <?php
 
 /**
- * Header navigation template part
+ * WordPress Customizer Template
+ * "Left Aligned Header"
  * 
  * @package WordPress
  * @subpackage Scipio
  * @since Scipio 1.0.0
+ * 
  */
 
-use SCIPIO\Classes\Scipio_Nav_Walker;
 ?>
-<div class="site-header__inner relative mx-auto flex justify-around items-center h-navH bg-blue-900">
-  <!-- Nav Links -->
-  <div class="site-header__inner--links order-2">
-    <?php
-    $header_nav = new Scipio_Nav_Walker();
-    wp_nav_menu(
-      array(
-        'container_class' => 'navigation-links h-navH',
-        'menu' => 'scipio-header-menu ',
-        'menu_class' => 'absolute top-full md:top-0 bg-blue-800 md:bg-transparent text-red-500 left-0 md:relative w-1/2 md:w-full md:flex justify-around items-center md:h-full font-semibold tracking-wide text-gray-100',
-        'location' => 'scipio-header-menu',
-        'walker' => $header_nav,
-      )
-    );
-    ?>
+<div class="site-header__inner relative mx-auto flex justify-around items-center h-nav bg-blue-900">
+  <!-- Navigation Links -->
+  <div class="site-header__inner--links">
+    <?php get_template_part('template-parts/components/header/header', 'links') ?>
   </div>
   <!-- Logo -->
   <?php if (!empty(has_custom_logo()) || !empty(get_bloginfo('title')) || !empty(get_bloginfo('description'))) { ?>

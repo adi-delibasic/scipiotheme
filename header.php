@@ -28,13 +28,14 @@ use SCIPIO\Classes\Scipio_Walker;
   <!-- Website navigation -->
   <header id="site-header">
     <?php
+
     /**
-     * Display header navigation if exists 
+     * Display header navigation menu
      */
     if (has_nav_menu('scipio-header-menu')) {
       get_template_part('template-parts/header/header', 'nav');
     } else {
-      echo 'no menu';
+      echo 'There is no menu created';
     }
     ?>
   </header>

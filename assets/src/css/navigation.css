@@ -11,8 +11,7 @@
 	.dropdown-submenu:hover {
 		position: relative;
 	}
-	.menu-item-has-children {
-	}
+
 	.menu-item-has-children:hover > .dropdown-menu {
 		display: block;
 		position: absolute;
