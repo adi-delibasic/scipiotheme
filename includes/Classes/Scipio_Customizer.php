@@ -61,12 +61,34 @@ class Scipio_Customizer {
     //Setting - Display Social Links
     $wp_customize->add_setting('scipio-display-links-settings', array(
       'default' => '',
+      'sanitize_callback' => '',
     ));
-    // Social Links
-    $wp_customize->add_setting('scipio-header-soc-settings', array(
+    /**
+     * Social links settings
+     */
+    $wp_customize->add_setting('facebook-settings', array(
       'default' => '',
       'sanitize_callback' => array($this, 'sanitize_custom_url')
     ));
+    $wp_customize->add_setting('instagram-settings', array(
+      'default' => '',
+      'sanitize_callback' => array($this, 'sanitize_custom_url')
+    ));
+    $wp_customize->add_setting('youtube-settings', array(
+      'default' => '',
+      'sanitize_callback' => array($this, 'sanitize_custom_url')
+    ));
+    $wp_customize->add_setting('twitter-settings', array(
+      'default' => '',
+      'sanitize_callback' => array($this, 'sanitize_custom_url')
+    ));
+    $wp_customize->add_setting('linkedin-settings', array(
+      'default' => '',
+      'sanitize_callback' => array($this, 'sanitize_custom_url')
+    ));
+
+
+
 
 
 
@@ -107,11 +129,11 @@ class Scipio_Customizer {
      * Control
      * Social Media Links  
      */
-    $this->scipio_social_control($wp_customize, 'scipio-facebook-control', 'Facebook');
-    $this->scipio_social_control($wp_customize, 'scipio-instagram-control', 'Instagram');
-    $this->scipio_social_control($wp_customize, 'scipio-youtube-control', 'You Tube');
-    $this->scipio_social_control($wp_customize, 'scipio-twitter-control', 'Twitter');
-    $this->scipio_social_control($wp_customize, 'scipio-linkedin-control', 'LinkedIn');
+    $this->scipio_social_control($wp_customize, 'facebook-settings', 'scipio-facebook-control', 'Facebook');
+    $this->scipio_social_control($wp_customize, 'instagram-settings', 'scipio-instagram-control', 'Instagram');
+    $this->scipio_social_control($wp_customize, 'youtube-settings',  'scipio-youtube-control', 'You Tube');
+    $this->scipio_social_control($wp_customize, 'twitter-settings',  'scipio-twitter-control', 'Twitter');
+    $this->scipio_social_control($wp_customize, 'linkedin-settings',  'scipio-linkedin-control', 'LinkedIn');
   }
   /**
    * Sanitization
@@ -128,12 +150,12 @@ class Scipio_Customizer {
    * @param pretty_name control label
    * 
    */
-  public function scipio_social_control($wp_customize, $name, $pretty_name) {
+  public function scipio_social_control($wp_customize, $setting, $name, $pretty_name) {
 
     $wp_customize->add_control(new WP_Customize_Control($wp_customize, $name, array(
       'label' => $pretty_name,
       'section' => 'scipio-header-socials',
-      'settings' => 'scipio-header-soc-settings',
+      'settings' => $setting,
       'type' => 'url',
     )));
   }

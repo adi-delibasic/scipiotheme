@@ -14,13 +14,14 @@
 <div class="site-header__inner--logo flex justify-around items-center h-40">
 
 
-  <!-- Social Media -->
+  <!-- Social Media Links -->
+
   <div class="site-header__inner--socials flex justif-center items-center gap-x-4 text-xl">
-    <i class="fab fa-facebook-f"></i>
-    <i class="fab fa-instagram"></i>
-    <i class="fab fa-twitter"></i>
-    <i class="fab fa-youtube"></i>
-    <i class="fab fa-linkedin"></i>
+    <a href="<?php echo esc_url(get_theme_mod('facebook-settings')); ?>"> <i class="fab fa-facebook-f"></i></a>
+    <a href="<?php echo esc_url(get_theme_mod('instagram-settings')); ?>"> <i class="fab fa-instagram"></i></a>
+    <a href="<?php echo esc_url(get_theme_mod('twitter-settings')); ?>"> <i class="fab fa-twitter"></i></a>
+    <a href="<?php echo esc_url(get_theme_mod('youtube-settings')); ?>"> <i class="fab fa-youtube"></i></a>
+    <a href="<?php echo esc_url(get_theme_mod('linkedin-settings')); ?>"> <i class="fab fa-linkedin"></i></a>
   </div>
 
   <?php
