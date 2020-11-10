@@ -31,19 +31,55 @@ class Scipio_Customizer {
 
 
   /**
-   * Scipio Header panel
+   * Scipio Header Panel
    * Section, Settings and Controls
    */
   private function scipio_customize_header($wp_customize) {
 
     /**
-     * Sections
+     * Section
      */
     $wp_customize->add_section('scipio-header-section', array(
       'title' => 'Scipio Header',
       'priority' => 2,
       'description' => esc_html__('Edit website header', 'scipio')
     ));
+
+    /**
+     *  Settings
+     */
+
+    //Default option
+    $wp_customize->add_setting('scipio-header-settings', array(
+      'deafult' => 'align-center',
+    ));
+
+    // Align center
+    // $wp_customize->add_setting();
+
+    /**
+     * Controls
+     */
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'scipio-header-control', array(
+      'label' => 'Scipio Header Customization',
+      'section' => 'scipio-header-section',
+      'settings' => 'scipio-header-settings',
+      'type' => 'select',
+      'choices' => array(
+        'align-left' => 'Align Center',
+        'align-right' => 'Align Right',
+        'align-left' => 'Align Left'
+      )
+
+    )));
+
+
+
+    /**
+     * Social Links Panel
+     * Section, Settings & Control
+     */
+
     $wp_customize->add_section('scipio-header-socials', array(
       'title' => 'Social Links',
       'priority' => 3,
@@ -52,19 +88,6 @@ class Scipio_Customizer {
 
     /**
      * Settings
-     */
-
-    // Setting - Header Aligment
-    $wp_customize->add_setting('scipio-header-settings', array(
-      'deafult' => 'align-right',
-    ));
-    //Setting - Display Social Links
-    $wp_customize->add_setting('scipio-display-links-settings', array(
-      'default' => '',
-      'sanitize_callback' => '',
-    ));
-    /**
-     * Social links settings
      */
     $wp_customize->add_setting('facebook-settings', array(
       'default' => '',
@@ -88,46 +111,8 @@ class Scipio_Customizer {
     ));
 
 
-
-
-
-
-
     /**
-     * Control
-     * Scipio Header
-     * Header Aligment
-     */
-    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'scipio-header-control', array(
-      'label' => 'Scipio Header Customization',
-      'section' => 'scipio-header-section',
-      'settings' => 'scipio-header-settings',
-      'type' => 'select',
-      'choices' => array(
-        'align-left' => 'Align Left',
-        'align-right' => 'Align Right',
-      )
-
-    )));
-    /**
-     * Control 
-     * Scipio Header
-     * Select Social Links To Display
-     */
-
-    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'scipio-select-social', array(
-      'label' => 'Select social links to display',
-      'section' => 'scipio-header-section',
-      'settings' => 'scipio-display-links-settings',
-      'type' => 'checkbox',
-
-
-    )));
-
-
-    /**
-     * Control
-     * Social Media Links  
+     * Controls
      */
     $this->scipio_social_control($wp_customize, 'facebook-settings', 'scipio-facebook-control', 'Facebook');
     $this->scipio_social_control($wp_customize, 'instagram-settings', 'scipio-instagram-control', 'Instagram');
@@ -135,10 +120,13 @@ class Scipio_Customizer {
     $this->scipio_social_control($wp_customize, 'twitter-settings',  'scipio-twitter-control', 'Twitter');
     $this->scipio_social_control($wp_customize, 'linkedin-settings',  'scipio-linkedin-control', 'LinkedIn');
   }
+
+
   /**
    * Sanitization
    * @param input to be sanitized on callback
    */
+
   public function sanitize_custom_url($input) {
     return filter_var($input, FILTER_SANITIZE_URL);
   }

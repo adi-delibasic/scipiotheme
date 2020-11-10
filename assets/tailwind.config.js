@@ -4,7 +4,8 @@ module.exports = {
 		purgeLayersByDefault: true,
 		removeDeprecatedGapUtilities: true,
 	},
-	purge: ['../**/*.php'],
+
+	purge: ['../**/*.php', './template-parts/*.php', './includes/*.php'],
 	theme: {
 		extend: {
 			fontFamily: {

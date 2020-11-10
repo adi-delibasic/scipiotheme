@@ -18,7 +18,8 @@
 		min-width: 250px;
 	}
 	.dropdown-menu li {
-		background: rgb(24, 3, 119);
+		@apply bg-gray-800;
+		@apply text-gray-100;
 	}
 
 	/* Nested menus */

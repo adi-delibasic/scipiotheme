@@ -6,6 +6,7 @@ const cssnano = require('cssnano');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const autoprefixer = require('autoprefixer');
+const fileloader = require('file-loader');
 
 //File paths
 const JS_DIR = path.resolve(__dirname, 'src/js');
@@ -67,10 +68,10 @@ const rules = [
 		test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
 		use: [
 			{
-				loader: 'url-loader',
+				loader: 'file-loader',
 				options: {
 					name: '[name].[ext]',
-					outputPath: '/css/fonts',
+					outputPath: 'fonts/',
 				},
 			},
 		],
