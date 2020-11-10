@@ -26,7 +26,7 @@
     if (function_exists('the_custom_logo') && has_custom_logo()) { ?>
       <!-- Display custom logo -->
 
-      <?php the_custom_logo() ?>
+      <?php the_custom_logo()  ?>
 
       <div class="site-header__inner--desc text-gray-900 text-left">
       <?php } else { ?>

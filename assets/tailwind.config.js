@@ -16,6 +16,9 @@ module.exports = {
 			maxHeight: {
 				none: '0px',
 			},
+			maxWidth: {
+				'7xl': '90%',
+			},
 			inset: {
 				full: '100%',
 			},
