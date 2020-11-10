@@ -37,7 +37,7 @@ $social_links = array(
 
 if (count(array_filter($social_links)) > 0) { ?>
 
-  <div class="site-header__inner--socials flex justify-center items-center gap-x-4 mx-auto text-xl w-40 ">
+  <div class="site-header__inner--socials flex justify-center items-center gap-x-4 mx-auto text-xl w-full ">
 
     <!-- Facebook -->
     <?php if (!empty($social_links['fb'])) : ?>

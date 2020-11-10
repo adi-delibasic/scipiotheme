@@ -9,7 +9,7 @@
     ?>
 
     <!-- Header Search -->
-    <div class="site-header__inner--search flex justify-center items-center gap-x-1 w-48">
-      <label for="search" class=" border border-gray-700 px-2 cursor-pointer">Search</label>
-      <input type="text" name="search" class=" border border-gray-700 w-full">
+    <div class="site-header__inner--search flex justify-center items-center gap-x-1 w-full mx-auto">
+      <label for="search" class=" border border-gray-700 px-2 cursor-pointer"><i class="fas fa-search"></i></label>
+      <input type="text" name="search" class=" border border-gray-700 w-2/3">
     </div>

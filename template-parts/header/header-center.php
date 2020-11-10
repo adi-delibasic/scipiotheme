@@ -39,15 +39,15 @@
 <!-- navigation bar -->
 <div class="site-header__inner relative mx-auto flex justify-around items-center max-w-7xl h-nav bg-transparent border-t-2 border-b-2 border-gray-300">
   <!-- Nav socials -->
-  <div class="site-header__inner--socials">
+  <div class="site-header__inner--socials w-1/3">
     <?php get_template_part('template-parts/components/header/header', 'socials') ?>
   </div>
   <!-- Nav links -->
-  <div class="site-header__inner--links">
+  <div class="site-header__inner--links w-2/3">
     <?php get_template_part('template-parts/components/header/header', 'links') ?>
   </div>
   <!-- Nav search -->
-  <div class="site-header__inner--links">
+  <div class="site-header__inner--links w-1/3">
     <?php get_template_part('template-parts/components/header/header', 'search') ?>
   </div>
 
