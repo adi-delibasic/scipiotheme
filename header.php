@@ -25,17 +25,29 @@ use SCIPIO\Classes\Scipio_Walker;
 <body class="<?php body_class(); ?>">
   <!-- Backward compactibility for version lower then 5.2 -->
   <?php function_exists('wp_body_open') ? wp_body_open() : ''; ?>
-  <!-- Website navigation -->
-  <header id="site-header">
-    <?php
 
-    /**
-     * Display header navigation menu
-     */
-    if (has_nav_menu('scipio-header-menu')) {
-      get_template_part('template-parts/header/header', 'center');
-    } else {
-      echo 'There is no menu created';
-    }
-    ?>
-  </header>
+
+  <?php
+  /**
+   * Display header
+   */
+  if (has_nav_menu('scipio-header-menu')) { ?>
+
+    <header id="site-header">
+
+      <?php
+      if (get_theme_mod('scipio-header-settings') === 'align-center') {
+
+        /**
+         * Center aligned header
+         */
+        get_template_part('template-parts/header/header', 'center');
+      }
+      ?>
+    </header>
+  <?php
+  } else {
+    echo 'There is no menu created';
+  }
+
+  ?>

@@ -51,11 +51,11 @@ class Scipio_Customizer {
 
     //Default option
     $wp_customize->add_setting('scipio-header-settings', array(
-      'deafult' => 'align-center',
+      'default' => 'align-center',
     ));
 
     // Align center
-    // $wp_customize->add_setting();
+
 
     /**
      * Controls
@@ -66,7 +66,7 @@ class Scipio_Customizer {
       'settings' => 'scipio-header-settings',
       'type' => 'select',
       'choices' => array(
-        'align-left' => 'Align Center',
+        'align-center' => 'Align Center',
         'align-right' => 'Align Right',
         'align-left' => 'Align Left'
       )
