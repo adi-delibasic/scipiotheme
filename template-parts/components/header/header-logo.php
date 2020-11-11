@@ -57,7 +57,7 @@
        */
       $tagline = esc_html__(get_bloginfo('description', 'scipio'));
       if (!empty($tagline)) { ?>
-          <div class="site-header__inner--desc__tag  text-xl">
+          <div class="site-header__inner--desc__tag text-xl">
             <?php echo $tagline = (strlen($tagline) > 50) ? substr($tagline, 0, 50) . '...' : $tagline; ?>
           </div>
         <?php } ?>

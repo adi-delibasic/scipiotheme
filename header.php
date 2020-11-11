@@ -39,12 +39,15 @@ use SCIPIO\Classes\Scipio_Walker;
       if (get_theme_mod('scipio-header-settings') === 'align-center') {
 
         /**
-         * Center aligned header
+         * Display header centered
          */
         get_template_part('template-parts/header/header', 'center');
+      } else if (get_theme_mod('scipio-header-settings') === 'align-left') {
+        get_template_part('template-parts/header/header', 'left');
       }
       ?>
     </header>
+
   <?php
   } else {
     echo 'There is no menu created';
