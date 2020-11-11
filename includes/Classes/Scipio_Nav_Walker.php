@@ -33,7 +33,7 @@ class Scipio_Nav_Walker extends Walker_Nav_Menu {
 
   public function start_lvl(&$output, $depth = 0, $args = \null) {
     $indent = str_repeat("\t", $depth);
-    $output .= "\n$indent <ul class=\"dropdown-menu h-0 overflow-hidden md:overflow-visible  md:h-full \">\n";
+    $output .= "\n$indent <ul class=\"dropdown-menu h-0 overflow-hidden md:overflow-visible md:h-full \">\n";
   }
 
   function start_el(&$output, $item, $depth = 0, $args = \null, $id = 0) {
@@ -90,7 +90,7 @@ class Scipio_Nav_Walker extends Walker_Nav_Menu {
     /**
      * Add styling to every a tag in the mobile menu
      */
-    $attributes .= 'class="dropdown-toggle h-full flex justify-between items-center px-10 py-2 md:px-6 md:py-0"';
+    $attributes .= 'class="dropdown-toggle h-full flex justify-between items-center px-10 py-2 md:px-0 md:py-0"';
     /**
      * Add class if the element has submenu
      */
