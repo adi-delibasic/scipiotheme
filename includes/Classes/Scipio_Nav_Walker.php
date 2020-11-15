@@ -91,6 +91,7 @@ class Scipio_Nav_Walker extends Walker_Nav_Menu {
      * Add styling to every a tag in the mobile menu
      */
     $attributes .= 'class="dropdown-toggle h-full flex justify-between items-center px-10 py-2 md:px-0 md:py-0"';
+
     /**
      * Add class if the element has submenu
      */
