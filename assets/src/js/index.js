@@ -5,5 +5,5 @@ import '@fortawesome/fontawesome-free/js/all.js';
 
 // Modules
 import Navigation from './modules/Navigation';
-import Navigation from './modules/customizer/Customizer';
+import Customizer from './modules/customizer/Customizer';
 const nav = new Navigation();
