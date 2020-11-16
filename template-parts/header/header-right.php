@@ -2,7 +2,7 @@
 
 /**
  * Default Header Layout
- * "Left Aligned Header"
+ * "Right Aligned Header"
  * 
  * @package WordPress
  * @subpackage Scipio
@@ -51,7 +51,7 @@
 <!-- Navigation bar -->
 <div class="site-header__inner relative mx-auto flex justify-between items-center max-w-7xl h-nav bg-transparent border-t-2 border-b-2 border-gray-300">
   <!-- Nav links -->
-  <div class="site-header__inner--links">
+  <div class="site-header__inner--links order-2">
     <?php get_template_part('template-parts/components/header/header', 'links') ?>
   </div>
   <!-- Nav search -->

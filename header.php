@@ -37,13 +37,14 @@ use SCIPIO\Classes\Scipio_Walker;
 
       <?php
       if (get_theme_mod('scipio-header-settings') === 'align-center') {
-
-        /**
-         * Display header centered
-         */
+        //  header center
         get_template_part('template-parts/header/header', 'center');
       } else if (get_theme_mod('scipio-header-settings') === 'align-left') {
+        // header left
         get_template_part('template-parts/header/header', 'left');
+      } else if (get_theme_mod('scipio-header-settings') === 'align-right') {
+        // header right
+        get_template_part('template-parts/header/header', 'right');
       }
       ?>
     </header>
