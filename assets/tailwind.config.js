@@ -1,10 +1,5 @@
 module.exports = {
 	important: true,
-	future: {
-		purgeLayersByDefault: true,
-		removeDeprecatedGapUtilities: true,
-	},
-
 	purge: ['../**/*.php', './template-parts/*.php', './includes/*.php'],
 	theme: {
 		extend: {
